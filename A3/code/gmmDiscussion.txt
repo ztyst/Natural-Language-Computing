@@ -1,0 +1,77 @@
+
+
+S    d    M  maxIter  Accuracy    
+32   13   2     5      0.9375
+32   13   3     5      0.96875
+32   13   4     5      1.0
+32   13   6     5      1.0
+32   13   8     5      1.0
+
+When only changing M and keeping others the same, we can see that the accuracy increases if the number of components increases. 
+
+S    d    M  maxIter  Accuracy
+32   13   2     1      0.6875
+32   13   2     2      0.84375
+32   13   2     5      0.9375
+32   13   2     10     0.96875
+32   13   2     20     1.0
+
+S    d    M  maxIter  Accuracy
+32   13   6     1      1.0
+32   13   6     2      0.96875
+32   13   6     5      1.0
+32   13   6     10     0.9375
+32   13   6     20     1.0
+
+From the above two experiments, it is not always the case that the accuracy increases when the number of maxIteration increases. 
+Instead the accuracy fructuates when maxIter increases when M equals to 6.
+
+S    d    M  maxIter  Accuracy
+32   13   2     2      0.84375 / 0.75
+16   13   2     2      0.9375 / 0.75
+
+32   13   2     5      0.9375
+16   13   2     5      1.0 
+
+32   13   8     20     1.0
+16   13   8     20     1.0
+
+When M and maxIter are very small, the accuracy will fructuate as it does not converge.
+
+When M and maxIter are small(M=2, maxIter=5), decreasing number of samples in both train and test set results to an increase in the accuracy.
+
+When M and maxIter are large enough, decreasing number of samples in both train and test set won't have an effect on the accracy.
+Since if the classifier can identify one test utterance from 32 candidates correctly, it is also able to identify correctly from 16 candidates.
+
+=====================================================================================================
+
+How might you improve the classification accuracy of the Gaussian mixtures, without adding more
+training data?
+
+I will increase the number of components so that there are enough components to get all features.
+
+=====================================================================================================
+
+When would your classifier decide that a given test utterance comes from none of the trained speaker
+models, and how would your classifier come to this decision?
+
+For any test utterance, the classifier will pick the most likely model from the trained speaker. 
+During the testing, the model will assign a log likelihood value for each trained speaker
+model which shows how much the similarity is between the testing model and the trained spearker model.
+A larger value indicates that the testing model is more similar with the trained model. 
+In order to prevent this situation, we can set up a threshold for the log likelihood value for different speakers, 
+so that the classfier is able to identify a given test utterance comes from none of the trained speaker models 
+if we get a value that is smaller than the threshold. However if the given test utterance has a very similar voice as 
+one of the train model, our classfier may fail to identify it as none of the trained speaker. 
+
+=====================================================================================================
+
+Can you think of some alternative methods for doing speaker identification that don’t use Gaussian
+mixtures?
+
+When we perform speaker identification, we are recognizing different patterns of each speaker. So template 
+matching can be one of the approaches to recognize voice. The speaker speaks different words or phrases, and 
+these voice are stored and are used as templates. The classfier will try to match the new voice with these 
+templates. However this method is very dependant on speakers. It is also possible to use neural network and analyze 
+different features. Different speakers have different patterns like different accents, different pitch, different volume,
+etc. By identifing these features, the classifier is able to identify different speakers.

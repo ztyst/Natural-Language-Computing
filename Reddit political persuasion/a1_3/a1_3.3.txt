@@ -1,0 +1,49 @@
+5 p-values: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4934, 0.0, 0.0, 0.5366, 0.7261, 0.0, 0.0001, 0.0226, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0017, 0.0, 0.0044, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0886, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1507, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.2354, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0001, 0.0, 0.0038, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0002, 0.033, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0817, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0001, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+50 p-values: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4934, 0.0, 0.0, 0.5366, 0.7261, 0.0, 0.0001, 0.0226, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0017, 0.0, 0.0044, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0886, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1507, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.2354, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0001, 0.0, 0.0038, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0002, 0.033, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0817, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0001, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+Accuracy for 1k: 0.3638
+Accuracy for full dataset: 0.3756
+Chosen feature intersection: {1, 74, 149}
+Top-5 at higher: {1, 163, 132, 74, 149}
+
+
+
+(a)
+The common features are "Number of first person pronoun", "liwc_home" and "receptiviti_insecure"
+
+A high frequency of using first person pronoun may represent people with highly selfish since they are always talking about
+themselves instead of others. Those type of person are very likely belongs to "Right".Therefore, the first person pronoun 
+are very likely to be one of the top features.
+
+In terms of "liwc_home", I guess it means that people of some political classes are talking more about "home" related topics than other groups.
+Those people tend to care more about their family or their country(homeland).
+
+For the feature "receptiviti_insecure", "Center" people are less likely to be insecure. "Alt" people might be the most insecure. 
+Therefore the feature is useful in identifing different classes.
+
+
+(b)
+p-values won't have a huge difference if we have more data. 
+It might become slightly lower because more data brings more diversity 
+and enables the classifier to choose best features with higher confidence.
+
+
+(c)
+1: "Number of first person pronoun" 
+74: "liwc_home"
+149: "receptiviti_insecure"
+163: "receptiviti_self_assured"
+132: "receptiviti_dutiful"
+
+People belongs to the class "alt" are tend to be more "insecure" than other classes. They are less "dutiful" compared with others as they are always trying to doubt themselves.
+
+For the class "center","Center" people are less likely to be "insecure". They tend to be mroe "self-assured" as they are most likely to be independent thinkers.
+This kind of people will not easily join a party unless there are interest to them.
+
+In terms of "liwc_home", I guess it means that people of some political classes are talking more about "home" related topics than other groups.
+Those people tend to care more about their family or their country(homeland). I don't know which specific class they belong to.
+
+A high frequency of using first person pronoun may represent people with highly selfish since they are always talking about
+themselves instead of others. Those type of person are very likely belongs to "Right". 
+
+"Left" wings mostly focus on the society. They care more about group interest and they are less selfish. So they are unlikely to use
+first person pronouns a lot.

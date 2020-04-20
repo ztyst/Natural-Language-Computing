@@ -1,0 +1,9 @@
+1000: 0.3772
+5000: 0.4389
+10000: 0.4412
+15000: 0.4566
+20000: 0.4541
+
+
+When the training dataset is larger, the accuracy tends to be better. From the result, we do see an increase in the accuracy from having a larger amount of training data. When the amount increases from 1k to 5k, the increase rate is highest, around 15%. The increasing rate starts to drop off after when the training amount goes from 5k to 15k. The accuracy decreases slightly from 15k to 20k.
+Additional training data adds more diversity which enables the classifier to improve fitting from more different cases. Therefore having more data will reduce the probability of underfitting. But, more training data does not always result in a higher accuracy (as per my result 15k to 20k). Too much training data may overfit the model and lower the accuracy. Also, bad data quality may result in a decrease in accuracy.
